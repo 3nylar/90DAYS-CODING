@@ -1,6 +1,6 @@
 :root {
     --neutral-900: hsl(227, 75%, 14%);
-    --nuetral-800: hsl(226, 25%, 17%);
+    --neutral-800: hsl(226, 25%, 17%);
     --neutral-700: hsl(225, 23%, 24%);
     --neutral-600: hsl(226, 11%, 37%);
     --neutral-300: hsl(0, 0%, 78%);
@@ -30,9 +30,6 @@
 } 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: var(--font-type);
 }
 
@@ -46,11 +43,63 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border: 1px solid var(--neutral-200);
     border-radius: 8px;
-    margin: 50px 50px 30px;
-    padding: 10px;
-    background-color: var(--neutral-900);
+    margin: 50px 30px;
+    padding: 15px;
+    background-color: var();
+}
 
+header span:nth-child(1) {
+    display: flex;
+    align-items: center;
+    color: #ffff;
+}
+
+header span:nth-child(2) {
+    display: flex;
+    align-items: center;
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    padding: 15px;
+    background-color: var();
+    border-radius: 8px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+    border: 1px solid var(--neutral-200);
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--neutral-900);
+}
+nav ul li a:hover {
+    color: var(--red-500);
+}
+
+nav ul li a.active {
+    color: var(--red-500);
+    background-color: var(--neutral-200);
+    border: 1px solid var(--red-500);
+}
+
+.extensions {
+    border: 1px solid var(--neutral-200);
+    border-radius: 8px;
 }
