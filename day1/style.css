@@ -1,0 +1,56 @@
+:root {
+    --neutral-900: hsl(227, 75%, 14%);
+    --nuetral-800: hsl(226, 25%, 17%);
+    --neutral-700: hsl(225, 23%, 24%);
+    --neutral-600: hsl(226, 11%, 37%);
+    --neutral-300: hsl(0, 0%, 78%);
+    --neutral-200: hsl(217, 61%, 90%);
+    --neutral-100: hsl(0, 0%, 93%);
+    --neutral-0: hsl(200, 60%, 99%);
+
+    --red-400: hsl(3, 86%, 64%);
+    --red-500: hsl(3, 71%, 56%);
+    --red-700: hsl(3, 77%, 44%);
+
+    --light-gradient: linear-gradient(
+        180deg,
+        #EBF2FC 0%,
+        #EEF8F9 100%
+    );
+    --dark-gradient: linear-gradient(
+        180deg,
+        #040918 0%,
+        #091540 100%
+    );  
+
+    --paragraph-size: 16px;
+    --heading-size: 32px;
+
+    --font-type: Noto Sans, sans-serif;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-type);
+}
+
+body {
+    background: var(--neutral-0);
+    color: var(--neutral-900);
+    font-size: var(--paragraph-size);
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--neutral-200);
+    border-radius: 8px;
+    margin: 50px 50px 30px;
+    padding: 10px;
+    background-color: var(--neutral-900);
+
+}
