@@ -34,7 +34,7 @@
 }
 
 body {
-    background: var(--neutral-0);
+    background: var(--light-gradient);
     color: var(--neutral-900);
     font-size: var(--paragraph-size);
     line-height: 1.5;
@@ -89,6 +89,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--neutral-900);
 }
+
 nav ul li a:hover {
     color: var(--red-500);
 }
@@ -102,31 +103,45 @@ nav ul li a.active {
 #all {
     display: grid;
     grid-template-columns: auto auto auto;
-    margin: 20px 30px;
+    margin: 20px 48px;
     gap: 10px;
 }
 
 .extensions {
     border: 1px solid var(--neutral-200);
-    border-radius: 8px;
+    border-radius: 18px;
+    background-color: #ffff;
 }
 
-.extentionCard {
+.extensionCard {
     display: flex;
     gap: 15px;
-    padding: 15px;
-}
-
-.extensionHeader {
-    align-items: center;
+    padding: 10px 15px;
 }
 
 .extensionName {
     font-size: 20px;
     font-weight: 600;
+    margin: 0;
+    padding: 0;
 }
 
 .extesionDescription {
     font-size: var(--paragraph-size);
+    margin: 0;
+    padding: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    color: #000;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
