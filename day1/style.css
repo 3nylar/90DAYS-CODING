@@ -99,17 +99,34 @@ nav ul li a.active {
     border: 1px solid var(--red-500);
 }
 
+#all {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 20px 30px;
+    gap: 10px;
+}
+
 .extensions {
     border: 1px solid var(--neutral-200);
     border-radius: 8px;
 }
 
-.extensionHeader {
+.extentionCard {
     display: flex;
+    gap: 15px;
+    padding: 15px;
+}
+
+.extensionHeader {
+    align-items: center;
 }
 
 .extensionName {
-    margin-left: 10px;
     font-size: 20px;
     font-weight: 600;
 }
+
+.extesionDescription {
+    font-size: var(--paragraph-size);
+}
+
