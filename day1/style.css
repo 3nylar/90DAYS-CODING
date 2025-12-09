@@ -40,6 +40,18 @@ body {
     line-height: 1.5;
 }
 
+body.darkMode {
+    background: var(--dark-gradient);
+    color: #fff;
+    --theme-icon: url('./assets/images/icon-moon.svg');
+}
+
+body.lightMode {
+    background: var(--light-gradient);
+    color: var(--neutral-900);
+    --theme-icon: url('./assets/images/icon-sun.svg');
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -56,12 +68,35 @@ header span:nth-child(1) {
     color: #ffff;
 }
 
-header span:nth-child(2) {
+.themeToggle {
     display: flex;
     align-items: center;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(97, 97, 97);
     padding: 10px;
     border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.4s;
+    justify-content: center;
+}
+
+.darkMode header{
+    background-color: var(--neutral-800);
+    color: #909090;
+}
+
+.lightMode .themeToggle{
+    background: var(--light-gradient);
+    color: var(--neutral-900);
+}
+
+.darkMode .themeToggle{
+    background: var(--dark-gradient);
+    color: #fff;
+}
+
+.themeToggle .themeIcon{
+    transition: transform 0.4s, opacity 0.4s;
 }
 
 nav {
@@ -69,7 +104,7 @@ nav {
     justify-content: space-between;
     margin: 0 40px;
     padding: 5px 15px;
-    background-color: var();
+    background-color: transparent;
     border-radius: 8px;
 }
 
@@ -83,7 +118,7 @@ nav ul li {
     border: 1px solid var(--neutral-200);
     border-radius: 50px;
     padding: 10px 20px;
-    background-color: #ffff;
+    background-color: #fff;
 }
 
 nav ul li a {
@@ -113,7 +148,7 @@ nav ul li a.active {
     flex-direction: column;
     border: 1px solid var(--neutral-200);
     border-radius: 18px;
-    background-color: #ffff;
+    background-color: #fff;
     align-items: center;
     height: 100%;
 }
