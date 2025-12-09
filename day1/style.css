@@ -44,10 +44,10 @@ header {
     display: flex;
     justify-content: space-between;
     border: 1px solid var(--neutral-200);
-    border-radius: 8px;
-    margin: 50px 30px;
+    border-radius: 18px;
+    margin: 50px;
     padding: 15px;
-    background-color: var();
+    background-color: #fff;
 }
 
 header span:nth-child(1) {
@@ -67,8 +67,8 @@ header span:nth-child(2) {
 nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 30px;
-    padding: 15px;
+    margin: 0 40px;
+    padding: 5px 15px;
     background-color: var();
     border-radius: 8px;
 }
@@ -76,13 +76,14 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    gap: 10px;
 }
 
 nav ul li {
-    margin: 0 10px;
     border: 1px solid var(--neutral-200);
     border-radius: 50px;
     padding: 10px 20px;
+    background-color: #ffff;
 }
 
 nav ul li a {
@@ -103,48 +104,57 @@ nav ul li a.active {
 #all {
     display: grid;
     grid-template-columns: auto auto auto;
-    margin: 20px 48px;
+    margin: 5px 55px;
     gap: 10px;
 }
 
 .extensions {
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--neutral-200);
     border-radius: 18px;
     background-color: #ffff;
+    align-items: center;
+    height: 100%;
 }
 
 .extensionCard {
     display: flex;
     gap: 15px;
-    padding: 10px 15px;
+    padding: 15px;
 }
 
 .extensionHeader {
-    padding: 0;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .extensionName {
     font-size: 20px;
     font-weight: 600;
     margin: 0;
-    padding: 0;
 }
 
-.extesionDescription {
+.extensionDescription {
     font-size: var(--paragraph-size);
-    margin: 0;
-    padding: 0;
+    margin: 4px 0 0;
+    line-height: 1.4;
+    opacity: 0.5;
 }
 
 .button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px 15px;
+    gap: 200px;
+    align-items: center;
+    margin-top: auto;
 }
 
 button {
     color: #000;
-    border: none;
+    border: 1px solid var(--neutral-300);
+    background-color: transparent;
     border-radius: 18px;
     padding: 10px 20px;
     cursor: pointer;
@@ -155,31 +165,39 @@ button:hover {
     color: #fff;
 }
 
-.toogle-switch {
+.toggle-switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 45px;
+    height: 24px;
     background-color: var(--neutral-200);
     border-radius: 50px;
     cursor: pointer;
+    transition: background-color 0.4s;
 }
 
-.toogle-switch.active {
+.toggle-switch.active {
     background-color: var(--red-500);
 }
 
-.toogle-switch .slider {
+.toggle-switch .slider {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #fff;
     border-radius: 50%;
-    transition: 0.4s;
+    transition: transform 0.4s;
 }
 
-.toogle-switch.active .slider {
-    transform: translateX(26px);
+.toggle-switch.active .slider {
+    transform: translateX(20px);
 }
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    color: var(--neutral-600);
+}   

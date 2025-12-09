@@ -1,9 +1,8 @@
-const simpleToggle = document.getElementById('simpleToggle');
-const toggleLabel = document.getElementById('toggleLabel');
-let isToggled = false;
+const toggles = document.querySelectorAll('.toggle-switch');
 
-simpleToggle.addEventListener('click', () => {
-    isToggled = !isToggled;
-    simpleToggle.classList.toggle('active');
-    toggleLabel.textContent = isToggled ? 'ON' : 'OFF';
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const active = toggle.classList.toggle('active');
+        toggle.setAttribute('aria-pressed', active);
+    });
 });
