@@ -26,7 +26,7 @@
     --paragraph-size: 16px;
     --heading-size: 32px;
 
-    --font-type: Noto Sans, sans-serif;
+    --font-family: "Noto Sans", sans-serif;
 } 
 
 * {

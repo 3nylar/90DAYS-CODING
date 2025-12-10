@@ -1,0 +1,24 @@
+:root {
+    --primary-color-1: hsl(61, 70%, 52%);
+    --primary-color-2: hsl(4, 69%, 50%);
+    --base-color: hsl(0, 0%, 100%);
+    --neutral-color-1: hsl(202, 86%, 94%);
+    --neutral-color-2: hsl(203, 41%, 72%);
+    --neutral-color-3: hsl(200, 26%, 54%);
+    --neutral-color-4: hsl(200, 24%, 40%);
+    --neutral-color-5: hsl(202, 55%, 16%);
+    --font-family: "Plus Jakarta Sans", sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--neutral-color-1);
+    color: var(--neutral-color-5);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
