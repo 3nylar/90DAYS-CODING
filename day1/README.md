@@ -2,7 +2,7 @@
 
 This is my solution to the **Browser Extensions Manager UI** challenge
 on [Frontend
-Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp).\
+Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp).
 Frontend Mentor challenges help beginners and intermediate developers
 improve their coding skills by building real-world projects.
 
@@ -40,7 +40,7 @@ Users should be able to:
 
 ### 🔗 Links
 
--   **Live Site:** https://90-days-eight.vercel.app/\
+-   **Live Site:** https://90-days-eight.vercel.app/
 -   **Solution URL:** *Coming soon*
 
 ## 🛠 My Process
