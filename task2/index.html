@@ -12,12 +12,12 @@
 </head>
 <body>
     <div class="container">
-        <section>
+        <section class="mortgage-calculator">
             <header>
                 <h1>Mortgage Calculator</h1>
                 <button id="clear-all" type="button">Clear All</button>
             </header>
-            <form id="morgage-form">
+            <form id="mortgage-form">
                 <label for="mortgage-amount">Mortgage Amount</label>
                 <input type="number" id="mortgage-amount" name="mortgage-amount" required>
 
@@ -27,22 +27,28 @@
                 <label for="interest-rate">Interest Rate</label>
                 <input type="number" step="0.01" id="interest-rate" name="interest-rate" required>
 
-                <label>
-                    <input type="radio" name="mortgage-type" value="repayment" checked>
-                    Repayment
-                </label>
-                <label>
-                    <input type="radio" name="mortgage-type" value="interest-only">
-                    Interest Only
-                </label>
+                <fieldset class="mortgage-type">
+                    <legend>Mortgage Type</legend>
+                    <label class="radio-option">
+                        <input type="radio" name="mortgage-type" value="repayment" checked>
+                        Repayment
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="mortgage-type" value="interest-only">
+                        Interest Only
+                    </label>
+                </fieldset>
 
-                <button type="submit">Calculate Repayments</button>
+                <button type="submit" id="calculate">
+                    <img src="assets/images/icon-calculator.svg" alt="Calculator icon">
+                    Calculate Repayments</button>
             </form>
         </section>
 
         <section id="results">
             <div id="empty-results">
-                <p>Results shown here</p>
+                <img src="assets/images/illustration-empty.svg" alt="Calculator illustration">
+                <h3>Results shown here</h3>
                 <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
             </div>
             
@@ -55,7 +61,7 @@
 
         </section>
     </div>
-    
+
     <footer class="attribution">
         <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</p>
     </footer>

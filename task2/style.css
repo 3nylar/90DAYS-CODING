@@ -21,4 +21,118 @@ body {
     color: var(--neutral-color-5);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
+
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    border-radius: 18px;
+    background: var(--base-color);
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+
+.mortgage-calculator {
+    color: var(--neutral-color-5);
+    width: 50%;
+    padding: 0 50px;
+}
+
+#results {
+    background: var(--neutral-color-5);
+    color: var(--base-color);
+    border-radius: 0 18px 18px 50px;
+    width: 50%;
+}
+
+#empty-results {
+    text-align: center;
+    color: var(--neutral-color-3);
+    padding: 50px 10px;
+    margin: 50px 0;
+}
+
+#empty-results h3{
+    margin: 10px auto;
+    font-weight: 600;
+    color: var(--base-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header button {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--neutral-color-5);
+    color: var(--neutral-color-5);
+    cursor: pointer;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="number"] {
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.mortgage-type {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+legend {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.radio-option:active {
+    border: 1px solid var(--neutral-color-3);
+    border-radius: 8px;
+    padding: 10px;
+    background: var(--neutral-color-2);    
+}
+
+#completed-results {
+    display: none;
+}
+
+input[type="radio"]:checked {
+    accent-color: var(--primary-color-1);
+}
+
+#calculate {
+    width: fit-content;
+    background-color: var(--primary-color-1);
+    border: none;
+    border-radius: 28px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
