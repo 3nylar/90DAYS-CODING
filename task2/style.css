@@ -81,6 +81,7 @@ label {
 .input-icon {
     position: relative;
     width: 100%;
+    margin-top: 6px;
 }
 
 .input-icon input {
@@ -92,7 +93,7 @@ label {
 }
 
 input.mortgage-amount {
-    padding-left: 50px;
+    padding-left: 65px;
 }
 
 input.mortgage-term, input.interest-rate {
@@ -108,22 +109,29 @@ input[type="number"]::-webkit-outer-spin-button {
 .currency,
 .unit {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--neutral-color-1);
+    color: var(--neutral-color-4);
     font-weight: 600;
-    padding: 6px 10px;
-    background: var(--neutral-color-2);
-    color: var(--neutral-color-5);
-    border-radius: 6px;
-    pointer-events: none; 
+    font-size: 18px;
 }
 
 .currency {
-    left: 10px;
+    left: 0.3px;
+    top: 1px;
+    bottom: 0.3px;
+    padding: 0 20px;
+    border-radius: 8px 0 0 8px; 
 }
 
 .unit {
-    right: 10px;
+    right: 0.5px;
+    top: 0.6px;
+    bottom: 1px;
+    padding: 0 15px;
+    border-radius: 0 8px 8px 0; 
 }
 
 .input-icon input[type="number"]:focus {
