@@ -29,7 +29,7 @@ body {
     color: var(--neutral-color-5);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-
+    min-height: 100vh;
 }
 
 .container {
@@ -39,13 +39,16 @@ body {
     border-radius: 18px;
     background: var(--base-color);
     margin: 50px auto;
-    justify-content: space-evenly;
+    gap: 0;
+}
+
+.container > section {
+    flex: 1;
 }
 
 .mortgage-calculator {
     color: var(--neutral-color-5);
     padding: 40px 30px;
-    width: 85%;
 }
 
 header {
@@ -71,11 +74,13 @@ header button {
 label {
     font-size: 14px;
     font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
 }
 
 .input-icon {
     position: relative;
-    margin-top: 8px;
+    width: 100%;
 }
 
 .input-icon input {
@@ -86,32 +91,49 @@ label {
     font-size: 16px;
 }
 
-.mortgage-amount {
-    width: 100%;
+input.mortgage-amount {
+    padding-left: 50px;
 }
 
-.currency {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
-    font-weight: 500;
-    left: 12px;
-    padding: 10px;
-    border-radius: 8px 0 0 8px;
-    background: var(--neutral-color-2);
+input.mortgage-term, input.interest-rate {
+    padding-left: 15px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.currency,
 .unit {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #555;
-    font-weight: 500;
-    right: 12px;
-    padding: 10px;
-    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    padding: 6px 10px;
     background: var(--neutral-color-2);
+    color: var(--neutral-color-5);
+    border-radius: 6px;
+    pointer-events: none; 
+}
+
+.currency {
+    left: 10px;
+}
+
+.unit {
+    right: 10px;
+}
+
+.input-icon input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color-1);
+}
+
+.input-icon:focus-within  .currency,
+.input-icon:focus-within .unit {
+    background: var(--primary-color-1); 
 }
 
 .term-interest {
@@ -140,7 +162,7 @@ legend {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px;
+    padding: 12px;
     border: 1px solid var(--neutral-color-2);
     border-radius: 8px;
     cursor: pointer;
@@ -206,7 +228,6 @@ legend {
     color: var(--base-color);
     border-radius: 0 18px 18px 80px;
     padding: 40px 30px;
-    width: 85%;
 }
 
 .empty-results {
