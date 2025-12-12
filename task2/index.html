@@ -21,11 +21,16 @@
             <!--Mortgage Form-->
             <form id="mortgage-form">
                 <!-- Mortgage Amount Input -->
-                <label for="mortgage-amount">Mortgage Amount</label>
-                <div class="input-icon">
-                    <span class="currency">&pound;</span>
-                    <input type="number"
-                    class="mortgage-amount" id="mortgage-amount" name="mortgage-amount" required>
+                <div>
+                    <label for="mortgage-amount">Mortgage Amount</label>
+                    <div class="input-wrapper">
+                        <div class="input-icon">
+                            <span class="currency">&pound;</span>
+                            <input type="number"
+                            class="mortgage-amount" id="mortgage-amount" name="mortgage-amount" required>
+                        </div>
+                        <span class="error-message" id="amount-error"></span>
+                    </div>
                 </div>
 
                 <!-- Mortgage Term Input -->
@@ -33,18 +38,24 @@
                     <!-- Term Input -->
                     <div class="term-input">
                         <label for="mortgage-term">Mortgage Term</label>
-                        <div class="input-icon">
-                            <input type="number" id="mortgage-term" name="mortgage-term" class="mortgage-term" required>
-                            <span class="unit">years</span>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <input type="number" id="mortgage-term" name="mortgage-term" class="mortgage-term" required>
+                                <span class="unit">years</span>
+                            </div>
+                            <span class="error-message" id="term-error"></span>
                         </div>
                     </div>
 
                     <!-- Interest Rate Input -->
                     <div class="interest-input">
                         <label for="interest-rate">Interest Rate</label>
-                        <div class="input-icon">
-                            <input type="number" step="0.01" id="interest-rate" name="interest-rate" class="interest-rate" required>
-                            <span class="unit">%</span>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <input type="number" step="0.01" id="interest-rate" name="interest-rate" class="interest-rate" required>
+                                <span class="unit">%</span>
+                            </div>
+                            <span class="error-message" id="rate-error"></span>
                         </div>
                     </div>
                     
@@ -52,7 +63,6 @@
 
                 <fieldset class="mortgage-type">
                     <legend>Mortgage Type</legend>
-
                     <!-- Repayment Type Radio Buttons -->
                     <label class="radio-option">
                         <input type="radio" name="mortgage-type" value="repayment">
@@ -66,7 +76,9 @@
                         <span class="custom-radio"></span>
                         <span class="text"> Interest Only</span>
                     </label>
+                    <span class="error-message"></span>
                 </fieldset>
+                
 
                 <button type="submit" id="calculate-btn" class="calculate-btn">
                     <img src="assets/images/icon-calculator.svg" alt="Calculator icon">
@@ -84,11 +96,16 @@
             
             <div id="completed-results" class="completed-results">
                 <h2>Your results</h2>
-                <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-                <p>Your monthly repayments: <span id="monthly-repayments"></span></p>
-                <p>Total you'll repay over the term: <span id="total-repayable"></span></p>
-            </div>
+                <p class="completed-message">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
 
+                <div class="result-box">
+                    <p class="result-label">Your monthly repayments: </p>
+                    <h1 id="monthly-repayments" class="monthly-amount"></h1>
+                    <hr class="divider">
+                    <p class="total-label">Total you'll repay over the term:</p> 
+                    <h3 id="total-repayable" class="total-amount"></h3>
+                </div>
+            </div>
         </section>
     </div>
 

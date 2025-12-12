@@ -32,6 +32,7 @@ Users should be able to:
 ### 🖼️ Screenshot
 
 ![Screenshot](./image.png)
+![Screenshot](./image2.png)
 
 ### 🔗 Links
 
