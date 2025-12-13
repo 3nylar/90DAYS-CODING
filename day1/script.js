@@ -56,12 +56,9 @@ function filterExtensions(filterType) {
 statusTabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
         e.preventDefault();
-        
-        // Update active tab styling
         statusTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         
-        // Get filter type and apply
         const filterType = tab.querySelector('a').getAttribute('href');
         filterExtensions(filterType);
     });
@@ -77,11 +74,9 @@ document.querySelectorAll('.toggle-switch').forEach(toggle => {
         const wasActive = toggle.classList.contains('active');
         toggle.classList.toggle('active');
         
-        // Update aria attribute for accessibility
         toggle.setAttribute('aria-pressed', !wasActive);
         toggle.setAttribute('role', 'switch');
         
-        // Update filter if currently viewing filtered tab
         const activeTab = document.querySelector('.status.active a');
         if (activeTab) {
             const filterType = activeTab.getAttribute('href');
@@ -117,11 +112,8 @@ document.querySelectorAll('.button-container button').forEach(button => {
             extensionCard.style.opacity = '0';
             extensionCard.style.transform = 'scale(0.95)';
             
-            // Remove after animation
             setTimeout(() => {
                 extensionCard.remove();
-                
-                // Show message if no extensions left in current view
                 checkEmptyState();
             }, 300);
         }
@@ -155,8 +147,6 @@ function checkEmptyState() {
     }
 }
 
-// ============= SEARCH FUNCTIONALITY (BONUS) =============
-// If you want to add a search feature later, here's a starter:
 function searchExtensions(query) {
     const searchTerm = query.toLowerCase();
     extensions.forEach(ext => {

@@ -88,6 +88,7 @@ header span:nth-child(1) {
 .darkMode header{
     background-color: var(--neutral-800);
     color: #909090;
+    border: none;
 }
 
 .lightMode .themeToggle{
@@ -95,8 +96,18 @@ header span:nth-child(1) {
 }
 
 .darkMode .themeToggle{
-    background: var(--dark-gradient);
+    background: var(--neutral-700);
     color: #fff;
+}
+
+.darkMode .extensions {
+    background-color: var(--neutral-800);
+    border: 1px solid var(--neutral-700);
+}
+
+.darkMode button {
+    color: #fff;
+    border: 1px solid var(--neutral-600);
 }
 
 nav {
@@ -218,7 +229,7 @@ button {
     color: #000;
     border: 1px solid var(--neutral-300);
     background-color: transparent;
-    border-radius: 18px;
+    border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -226,6 +237,12 @@ button {
 button:hover {
     background-color: var(--red-500);
     color: #fff;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid var(--red-500);
+    background-color: var(--neutral-700);
 }
 
 .toggle-switch {
@@ -245,6 +262,12 @@ button:hover {
 
 .toggle-switch:hover {
     background-color: var(--red-400);
+}
+
+.toggle-switch:focus {
+    outline: none;
+    border: 2px solid var(--red-500);
+    padding: 2px;
 }
 
 .toggle-switch .slider {
