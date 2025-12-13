@@ -122,5 +122,4 @@ document.getElementById("clear-all").addEventListener("click", () => {
 
     // Switch back to empty state
     completedResults.style.display = "none";  
-    emptyResults.style.display = "block";
 });

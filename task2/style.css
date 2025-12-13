@@ -36,8 +36,7 @@
     --font-size-large: 20px;
     --font-size-xlarge: 32px;
 
-    --border-radius-xsmall: 6px;
-    --border-radius-small: 8px;
+    --border-radius-small: 6px;
     --border-radius-medium: 12px;
     --border-radius-large: 18px;
     --border-radius-xlarge: 28px;
@@ -52,6 +51,7 @@
     --max-height: 100vh;
     --height: 100%;
 
+    --gap-xsmall: 5px;
     --gap-small: 10px;
     --gap-xmedium: 15px;
     --gap-medium: 20px;
@@ -80,7 +80,6 @@
 
 body {
     background: var(--background-color-1);
-    color: var(--text-color-light);
     font-size: var(--font-size-small);
     min-height: 100vh;
 }
@@ -124,6 +123,11 @@ header button {
     cursor: pointer;
 }
 
+header button:hover {
+    border-bottom: 1px solid var(--neutral-color-5);
+    color: var(--neutral-color-5);
+}
+
 label {
     font-size: 14px;
     font-weight: 500;
@@ -136,7 +140,6 @@ label {
     width: 100%;
     margin-top: 6px;
     display: flex;
-    transition: border-color 0.3s;
     border: 1px solid var(--neutral-color-2);
     border-radius: var(--border-radius-small);
 }
@@ -181,9 +184,13 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: var(--border-radius-small);
 }
 
-.input-icon input[type="number"]:focus{
+.input-icon:focus-within {
+    border : 1.5px solid var(--primary-color-1);
+    border-radius: var(--border-radius-small);
+}
+
+.input-icon input[type="number"]{
     outline: none;
-    border-color: var(--primary-color-1);
 }
 
 .input-icon:focus-within  .currency,
@@ -224,25 +231,26 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: var(--margin-large) 0;
     display: flex;
     flex-direction: column;
-    gap: var(--gap-small);
 }
 
 legend {
     font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--margin-small);
+    color: var(--neutral-color-4);
 }
 
 /* Radio style */
 .radio-option {
     display: flex;
     align-items: center;
-    gap: var(--gap-small);
-    padding: var(--margin-small);
-    border: 1px solid var(--neutral-color-2);
+    gap: var(--gap-xmedium);
+    padding: 15px;
+    color: var(--base-color-2);
+    font-weight: var(--font-weight-semi-bold);
+    border: 1px solid var(--neutral-color-4);
     border-radius: var(--border-radius-small);
     cursor: pointer;
-    transition: 0.2s ease;
 }
 
 .radio-option:hover {
@@ -257,7 +265,7 @@ legend {
 .custom-radio {
     width: 20px;
     height: 20px;
-    border: 2px solid var(--neutral-color-3);
+    border: 1.5px solid var(--neutral-color-4);
     border-radius: 50%;
     position: relative;
 }
@@ -306,7 +314,7 @@ legend {
 
 .results {
     background: var(--neutral-color-5);
-    color: var(--base-color);
+    color: var(--base-color-1);
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) var(--border-radius-xxlarge);
     padding: 40px 30px;
 }
@@ -324,18 +332,18 @@ legend {
 .empty-results h3{
     margin: var(--margin-small) auto;
     font-weight: var(--font-weight-semi-bold);
-    color: var(--base-color);
+    color: var(--base-color-1);
 }
 
 .completed-message {
-    color: var(--neutral-color-3);
-    font-weight: var(--font-weight-semi-bold);
-    margin-top: var(--margin-medium);
+    color: var(--neutral-color-2);
+    font-weight: var(--font-weight-medium);
+    margin-top: var(--margin-xmedium);
     font-size: 16px;
 }
 
 .result-box {
-    background: var(--background-color-5);
+    background: #12222b;
     border-top: 4px solid var(--primary-color-1);
     padding: 24px;
     border-radius: var(--border-radius-small);
@@ -353,13 +361,19 @@ legend {
     border: none;
     border-bottom: 1px solid var(--neutral-color-3);
     opacity: 0.3;
-    margin: 24px 0;
+    margin: 35px 0;
 }
-
-.total-label, .result-label {
+.total-label {
     color: var(--neutral-color-3);
     font-size: var(--font-size-xsmall);
     margin-bottom: 8px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.result-label {
+    color: var(--neutral-color-3);
+    font-size: var(--font-size-xsmall);
+    margin: 10px 0 8px;
     font-weight: var(--font-weight-semi-bold);
 }
 
@@ -367,11 +381,12 @@ legend {
     color: var(--base-color-1);
     font-size: 22px;
     font-weight: var(--font-weight-bold);
+    padding-bottom: 10px;
 }
-
 
 .completed-results {
     display: none;
+    padding: 0 10px;
 }
 
 .attribution { 
@@ -382,3 +397,26 @@ legend {
 .attribution a { 
     color: hsl(228, 45%, 44%);
 }
+
+@media (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gap-small);
+    }
+
+    .term-interest {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .results {
+        border-radius: 0 0 24px 24px;
+    }
+}
+
