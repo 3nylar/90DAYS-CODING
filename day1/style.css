@@ -30,7 +30,7 @@
 } 
 
 * {
-    font-family: var(--font-type);
+    font-family: var(--font-family);
 }
 
 body {
@@ -65,7 +65,7 @@ header {
 header span:nth-child(1) {
     display: flex;
     align-items: center;
-    color: #ffff;
+    color: var(--neutral-900);
 }
 
 .themeToggle {
@@ -126,10 +126,6 @@ nav ul li a {
     color: var(--neutral-900);
 }
 
-nav ul li a:hover {
-    color: var(--red-500);
-}
-
 nav ul li a.active {
     color: var(--red-500);
     background-color: var(--neutral-200);
@@ -141,6 +137,38 @@ nav ul li a.active {
     grid-template-columns: auto auto auto;
     margin: 5px 55px;
     gap: 10px;
+}
+
+.status {
+    border-radius: 50px;
+}
+
+.status a {
+    display: block;
+}
+
+.status:not(.active):hover {
+    background-color: var(--neutral-200); 
+}
+
+.status.active {
+    background-color: var(--red-500);
+}
+
+.status.active a {
+    color: #fff;
+}
+
+.status.active:hover {
+    background-color: var(--red-400);
+}
+
+.themeToggle:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+body.darkMode .themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .extensions {
@@ -215,6 +243,10 @@ button:hover {
     background-color: var(--red-500);
 }
 
+.toggle-switch:hover {
+    background-color: var(--red-400);
+}
+
 .toggle-switch .slider {
     position: absolute;
     top: 2px;
@@ -230,16 +262,18 @@ button:hover {
     transform: translateX(20px);
 }
 
-footer {
-    text-align: center;
-    margin: 20px 0;
-    padding: 10px 0;
-    color: var(--neutral-600);
-}   
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
 
 @media (max-width: 768px) {
     #all {
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         margin: 5px 10px;
     }
     
