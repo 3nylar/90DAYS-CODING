@@ -402,7 +402,6 @@ legend {
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        justify-content: center;
     }
 
     header {
@@ -418,6 +417,11 @@ legend {
 
     .results {
         border-radius: 0 0 24px 24px;
+    }
+
+    .calculate-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
