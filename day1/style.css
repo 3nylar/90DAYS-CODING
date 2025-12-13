@@ -71,13 +71,18 @@ header span:nth-child(1) {
 .themeToggle {
     display: flex;
     align-items: center;
-    background-color: rgb(97, 97, 97);
     padding: 10px;
     border-radius: 8px;
     position: relative;
     cursor: pointer;
     transition: background 0.4s;
     justify-content: center;
+    background: var(--neutral-100);
+}
+
+.themeToggle:focus {
+    outline: none;
+    border: 1px solid var(--red-500);
 }
 
 .darkMode header{
@@ -86,17 +91,12 @@ header span:nth-child(1) {
 }
 
 .lightMode .themeToggle{
-    background: var(--light-gradient);
     color: var(--neutral-900);
 }
 
 .darkMode .themeToggle{
     background: var(--dark-gradient);
     color: #fff;
-}
-
-.themeToggle .themeIcon{
-    transition: transform 0.4s, opacity 0.4s;
 }
 
 nav {
