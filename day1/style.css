@@ -185,6 +185,7 @@ nav ul li a.active {
 
 .darkMode .status {
     background-color: var(--neutral-700);
+    border: 1px solid var(--neutral-600);
 }
 
 .darkMode .status:hover {
@@ -195,6 +196,18 @@ nav ul li a.active {
     background-color: var(--red-400);
     border: 1px solid var(--neutral-900);
 }
+
+.darkMode .status.active:focus {
+    outline: none;
+    border: 1px solid var(--red-400);
+}
+
+.darkMode .status:focus {
+    outline: none;
+    border: 1px solid var(--red-400);
+}
+
+
 
 .darkMode .status:not(.active) a {
     color: #fff;
