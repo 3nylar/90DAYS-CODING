@@ -72,9 +72,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-* {
     font-family: var(--font-family-main);
 }
 
@@ -85,7 +82,6 @@ body {
 }
 
 .container {
-    max-width: 1000px;
     display: flex;
     border-radius: 18px;
     background: var(--base-color-1);
@@ -156,6 +152,7 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+    
 }
 
 .currency,
@@ -398,10 +395,43 @@ legend {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 0;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .term-interest {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .interest-input, .term-input {
+        width: 100%;
+    }
+
+    .calculate-btn {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .results {
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
     .container {
         display: grid;
+        height: auto;
         grid-template-columns: 1fr;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
     }
 
     header {
@@ -416,7 +446,7 @@ legend {
     }
 
     .results {
-        border-radius: 0 0 24px 24px;
+        border-radius: 0;
     }
 
     .calculate-btn {
@@ -424,4 +454,3 @@ legend {
         justify-content: center;
     }
 }
-
