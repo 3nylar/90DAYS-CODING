@@ -236,14 +236,14 @@ body.darkMode .themeToggle:hover {
     border: 1px solid var(--neutral-100);
     border-radius: 18px;
     background-color: #fff;
-    align-items: center;
     height: 100%;
+    gap: 20px;
+    padding: 16px;
 }
 
 .extensionCard {
     display: flex;
-    gap: 15px;
-    padding: 15px;
+    gap: 10px;
 }
 
 .extensionHeader {
@@ -266,11 +266,9 @@ body.darkMode .themeToggle:hover {
 
 .button-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 15px;
     margin-top: auto;
-    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {
@@ -346,6 +344,9 @@ button:focus {
 }
 
 @media (max-width: 480px) {
+    body {
+        margin: auto 15px;
+    }
     header {
         margin: 20px 10px;
     }

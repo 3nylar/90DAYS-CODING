@@ -7,12 +7,12 @@ themeToggle.addEventListener('click', () => {
     if (isDark) {
         document.body.classList.remove('darkMode');
         document.body.classList.add('lightMode');
-        themeIcon.src = "assets/images/icon-sun.svg";
+        themeIcon.src = "assets/images/icon-moon.svg";
         themeIcon.alt = "light mode icon";
     } else {
         document.body.classList.remove('lightMode');
         document.body.classList.add('darkMode');
-        themeIcon.src = "assets/images/icon-moon.svg";
+        themeIcon.src = "assets/images/icon-sun.svg";
         themeIcon.alt = "dark mode icon";
     }
     
