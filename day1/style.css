@@ -29,9 +29,13 @@
     --font-family: "Noto Sans", sans-serif;
 } 
 
-* {
+*,
+*::before,
+*::after {
     font-family: var(--font-family);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -262,11 +266,11 @@ body.darkMode .themeToggle:hover {
 
 .button-container {
     display: flex;
-    justify-content: space-around;
-    padding: 20px 15px;
-    gap: 200px;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
     margin-top: auto;
+    gap: 12px;
 }
 
 button {
@@ -333,37 +337,45 @@ button:focus {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 768px) {
-    * {
-        margin: 0;
-        padding: 0;
+@media (max-width: 1024px) {
+    #all {
+        grid-template-columns: 2fr 2fr;
+        margin: 5px 20px;
     }
+    
+}
 
+@media (max-width: 480px) {
     header {
         margin: 20px 10px;
     }
 
-    #all {
-        grid-template-columns: 1fr;
-        margin: 5px 10px;
-    }
-
     nav {
-        display: flex;
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 25px;
+        align-items: center;
+        gap: 15px;
     }
 
     nav h2 {
+        font-size: 28px;
         text-align: center;
-        font-size: 32px;
+        margin-top: 20px;
     }
 
     nav ul {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #all {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }   
+    
+    .button-container {
+        gap: 100px;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
     }
 }
