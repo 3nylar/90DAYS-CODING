@@ -167,7 +167,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .currency {
-    padding: 0 var(--margin-large);
+    padding: 0 var(--margin-medium);
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small); 
 }
 
